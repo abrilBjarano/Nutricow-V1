@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+body { background-color: rgba(51, 32, 81, 0.84) !important; }
+
+.emoji-with-shadow {
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
+  /* Puedes ajustar los valores de text-shadow según tus preferencias */
+}
