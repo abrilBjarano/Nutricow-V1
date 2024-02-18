@@ -1,0 +1,13 @@
+.fixed-button {
+
+  border: none;
+  align-items: center;
+  bottom: 15px;
+  position: fixed;
+  right: 15px;
+  padding: 10px 10px;
+  margin-bottom: 80px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  transform: scale(3);
+}

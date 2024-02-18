@@ -17,7 +17,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
     LandingPageComponent,
     EditPageComponent,
     InfoPageComponent,
-    CategoriesComponent
+    CategoriesComponent,
   ],
   imports: [
     CommonModule,

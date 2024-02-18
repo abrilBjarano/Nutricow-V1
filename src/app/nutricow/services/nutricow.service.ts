@@ -7,7 +7,7 @@ import { Category } from '../interfaces/category.interface';
 export class NutricowService {
 
   private categories: Category[] = [
-    { emoji: '🧀', counter: 0, upperLimit: 1 },
+    { emoji: '🥛', counter: 0, upperLimit: 1 },
     { emoji: '🍇', counter: 0, upperLimit: 3 },
     { emoji: '🥦', counter: 0, upperLimit: 4 },
     { emoji: '🌱', counter: 0, upperLimit: 0 },
