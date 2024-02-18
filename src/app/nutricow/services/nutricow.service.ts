@@ -11,10 +11,10 @@ export class NutricowService {
     { emoji: '🍇', counter: 0, upperLimit: 3 },
     { emoji: '🥦', counter: 0, upperLimit: 4 },
     { emoji: '🌱', counter: 0, upperLimit: 0 },
-    { emoji: '🎑', counter: 0, upperLimit: 6 },
     { emoji: '🥩', counter: 0, upperLimit: 5 },
     { emoji: '🥑', counter: 0, upperLimit: 2 },
     { emoji: '🥜', counter: 0, upperLimit: 1 },
+    { emoji: '🎑', counter: 0, upperLimit: 6 },
     { emoji: '🚰', counter: 0, upperLimit: 5 },
   ]
 

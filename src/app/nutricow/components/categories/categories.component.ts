@@ -5,7 +5,12 @@ import { Category } from '../../interfaces/category.interface';
 @Component({
   selector: 'nutricow-categories',
   templateUrl: './categories.component.html',
-  styles: ``
+  styles: `
+    .zoom-out {
+      transform: scale(.9);
+      transform-origin: top center;
+    }
+  `
 })
 export class CategoriesComponent implements OnInit {
 
