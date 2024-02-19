@@ -11,7 +11,7 @@ import { FixedButtonComponent } from './components/fixed-button/fixed-button.com
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    FixedButtonComponent
+    FixedButtonComponent,
   ],
   imports: [
     CommonModule,
