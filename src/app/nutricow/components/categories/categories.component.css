@@ -1,0 +1,8 @@
+.zoom-out {
+  transform: scale(.9);
+  transform-origin: top center;
+}
+
+.text-completed {
+  color: rgb(18, 104, 18);
+}

@@ -16,7 +16,7 @@
 
       <div class="d-flex align-items-center mx-auto">
         <span
-          [ngClass]="{'text-black': category.counter < category.upperLimit, 'text-success': category.counter === category.upperLimit}">
+          [ngClass]="{'text-black': category.counter < category.upperLimit, 'text-white': category.counter === category.upperLimit}">
             <strong>{{ category.counter }}</strong>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <strong>{{ category.upperLimit }}
@@ -33,12 +33,14 @@
 
       <div>
         <button
-          class="btn btn-danger mx-2 btn-sm ">
+          class="btn btn-danger mx-2 btn-sm"
+          (click)="substractQty(category)">
             ➖
         </button>
 
         <button
-          class="btn btn-success mx-1 btn-sm">
+          class="btn btn-success mx-1 btn-sm"
+          (click)="addQty(category)">
             ➕
         </button>
       </div>

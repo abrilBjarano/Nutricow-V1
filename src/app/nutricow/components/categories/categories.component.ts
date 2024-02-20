@@ -5,12 +5,7 @@ import { Category } from '../../interfaces/category.interface';
 @Component({
   selector: 'nutricow-categories',
   templateUrl: './categories.component.html',
-  styles: `
-    .zoom-out {
-      transform: scale(.9);
-      transform-origin: top center;
-    }
-  `
+  styleUrl: './categories.component.css'
 })
 export class CategoriesComponent implements OnInit {
 
@@ -19,8 +14,15 @@ export class CategoriesComponent implements OnInit {
   constructor( private nutricowService: NutricowService ) {};
 
   ngOnInit(): Category[] {
-
     return this.categories = this.nutricowService.getCategories();
+  }
+
+  addQty( category: Category ): void {
+    this.nutricowService.addQty( category );
+  }
+
+  substractQty( category: Category ): void {
+    this.nutricowService.substractQty( category );
   }
 
 }

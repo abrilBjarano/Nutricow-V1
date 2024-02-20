@@ -6,7 +6,7 @@ import { Category } from '../interfaces/category.interface';
 })
 export class NutricowService {
 
-  private categories: Category[] = [
+  private _categories: Category[] = [
     { emoji: '🥛', counter: 0, upperLimit: 1 },
     { emoji: '🍇', counter: 0, upperLimit: 3 },
     { emoji: '🥦', counter: 0, upperLimit: 4 },
@@ -18,8 +18,18 @@ export class NutricowService {
     { emoji: '🚰', counter: 0, upperLimit: 5 },
   ]
 
-  public getCategories(): Category[] {
-    return [... this.categories];
+  getCategories(): Category[] {
+    return [... this._categories];
+  }
+
+  addQty( category: Category ) {
+    if( category.counter < category.upperLimit )
+      category.counter ++;
+  }
+
+  substractQty( category: Category ) {
+    if( category.counter > 0 )
+      category.counter --;
   }
 
 }
