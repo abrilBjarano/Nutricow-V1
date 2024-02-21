@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NutricowService } from '../../services/nutricow.service';
+import { Category } from '../../interfaces/category.interface';
 
 @Component({
   selector: 'nutricow-info-page',
@@ -6,6 +8,16 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class InfoPageComponent {
+
+  categories!: Category[];
+
+  constructor( private nutricowService: NutricowService ) {
+    this.categories = this.nutricowService.getCategories();
+  }
+
+  addQty( category: Category ){
+    this.nutricowService.addQty(category);
+  }
 
   public lacteos: string[] = [
     'Leche de almendras ó soya: 1 taza',
