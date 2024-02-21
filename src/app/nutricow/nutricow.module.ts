@@ -9,6 +9,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { EditPageComponent } from './pages/edit-page/edit-page.component';
 import { InfoPageComponent } from './pages/info-page/info-page.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
+import { SubsButtonComponent } from './components/subs-button/subs-button.component';
 
 
 
@@ -18,6 +20,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     EditPageComponent,
     InfoPageComponent,
     CategoriesComponent,
+    AddButtonComponent,
+    SubsButtonComponent,
   ],
   imports: [
     CommonModule,
