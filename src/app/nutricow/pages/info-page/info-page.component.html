@@ -1,108 +1,19 @@
 <div class="container">
 
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🥛. Lácteos</h3>
+  <ng-container *ngFor="let title of titles; let i = index">
+    <div class="container">
+      <div class="mb-5">
+        <h3 class="mb-4 text-white">{{ title }}</h3>
 
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let lacteo of lacteos" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ lacteo }}</span>
-          <nutricow-add-button (click)="addQty(categories[0])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
+        <ul class="list-group list-group-item-dark">
+          <li *ngFor="let item of getItemsByIndex(i)" class="list-group-item d-flex justify-content-between align-items-center">
+            <span>{{ item }}</span>
+            <nutricow-add-button (click)="addQty(categories[i])" style="margin-left: auto;"></nutricow-add-button>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🍇. Frutas</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let fruta of frutas" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ fruta }}</span>
-          <nutricow-add-button (click)="addQty(categories[1])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🥦. Verduras</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let verdura of verduras" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ verdura }}</span>
-          <nutricow-add-button (click)="addQty(categories[2])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🌱. Leguminosas</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let leguminosa of leguminosas" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ leguminosa }}</span>
-          <nutricow-add-button (click)="addQty(categories[3])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🥩. Carnes</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let carne of carnes" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ carne }}</span>
-          <nutricow-add-button (click)="addQty(categories[4])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🥑. Grasas sin proteina</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let grasaSP of grasasSinProteina" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ grasaSP }}</span>
-          <nutricow-add-button (click)="addQty(categories[5])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🥜. Grasas con proteína</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let grasaCP of grasasConProteina" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ grasaCP }}</span>
-          <nutricow-add-button (click)="addQty(categories[6])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mb-5">
-      <h3 class="mb-4 text-white">🎑. Cereales</h3>
-
-      <ul class="list-group list-group-item-dark">
-        <li *ngFor="let cereal of cereales" class="list-group-item d-flex justify-content-between align-items-center">
-          <span>{{ cereal }}</span>
-          <nutricow-add-button (click)="addQty(categories[7])" style="margin-left: auto;"></nutricow-add-button>
-        </li>
-      </ul>
-    </div>
-  </div>
+  </ng-container>
 
   <div class="mb-5">
     Hola
