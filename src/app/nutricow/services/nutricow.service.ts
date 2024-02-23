@@ -22,6 +22,12 @@ export class NutricowService {
     return [... this._categories];
   }
 
+  private _kcal: number = 1400;
+
+  getKcal(): number {
+    return this._kcal;
+  }
+
   addQty( category: Category ) {
     if( category.counter < category.upperLimit )
       category.counter ++;
