@@ -1,13 +1,32 @@
 .fixed-button {
-
   border: none;
   align-items: center;
   bottom: 15px;
   position: fixed;
   right: 15px;
-  padding: 10px 10px;
-  margin-bottom: 80px;
-  padding-right: 15px;
-  padding-bottom: 15px;
+  padding: 0;
+  margin: 0;
   transform: scale(3);
+  font-size: 24px;
+  overflow: hidden;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  padding-bottom: 50px; /* Modificación: Se agregó relleno inferior */
+  padding-right: 20px; /* Modificación: Se agregó relleno derecho */
+}
+
+.fixed-button button {
+  padding: 10px;
+  margin: 0;
+  font-size: inherit;
+  line-height: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 24px; /* Ancho del emoji */
+  height: 24px; /* Alto del emoji */
+}
+
+.fixed-button button:focus {
+  outline: none;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NutricowService } from '../../services/nutricow.service';
 
 @Component({
   selector: 'nutricow-landing-page',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class LandingPageComponent {
 
+  constructor( private nutricowService: NutricowService ) {}
+
   public emojiButton: string = '🔄️';
+
+  restart() {
+    this.nutricowService.restart();
+  }
 
 }

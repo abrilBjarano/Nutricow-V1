@@ -32,4 +32,10 @@ export class NutricowService {
       category.counter --;
   }
 
+  restart() {
+    this._categories.forEach( category => {
+      category.counter = 0;
+    })
+  }
+
 }
