@@ -11,6 +11,7 @@ import { InfoPageComponent } from './pages/info-page/info-page.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { SubsButtonComponent } from './components/subs-button/subs-button.component';
+import { InputEditComponent } from './components/input-edit/input-edit.component';
 
 
 
@@ -22,6 +23,7 @@ import { SubsButtonComponent } from './components/subs-button/subs-button.compon
     CategoriesComponent,
     AddButtonComponent,
     SubsButtonComponent,
+    InputEditComponent,
   ],
   imports: [
     CommonModule,
