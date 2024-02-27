@@ -12,6 +12,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { SubsButtonComponent } from './components/subs-button/subs-button.component';
 import { InputEditComponent } from './components/input-edit/input-edit.component';
+import { FoodComponent } from './components/food/food.component';
 
 
 
@@ -24,6 +25,7 @@ import { InputEditComponent } from './components/input-edit/input-edit.component
     AddButtonComponent,
     SubsButtonComponent,
     InputEditComponent,
+    FoodComponent,
   ],
   imports: [
     CommonModule,
