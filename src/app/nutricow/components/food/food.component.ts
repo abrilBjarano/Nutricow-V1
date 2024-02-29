@@ -19,7 +19,7 @@ export class FoodComponent {
     this.nutricowService.addQty(category);
   }
 
-  public titles: string[] = [
+  titles: string[] = [
     '🥛. Lácteos',
     '🍇. Frutas',
     '🥦. Verduras',
@@ -30,7 +30,7 @@ export class FoodComponent {
     '🎑. Cereales',
   ]
 
-  public subtitles: string[] = [
+  subtitles: string[] = [
     'lacteo',
     'fruta',
     'verdura',
@@ -41,7 +41,7 @@ export class FoodComponent {
     'cereal',
   ]
 
-  public items: string[][] = [
+  items: string[][] = [
     ['Leche de almendras ó soya: 1 taza', 'Leche light: 1 taza', 'Queso cottage: 3 cda', 'Yogurt bebible light natural: 250 ml', 'Yogurt griego natural: ¾'],['* Melón: 1 taza', '* Piña: ¾ taza', '* Plátano: ½ pieza', '* Sandía: 1 taza', 'Ciruela Fresca: 2 piezas', 'Durazno Fresco: 2 piezas', 'Fresas: 1 taza', 'Frutas Varias: 1 taza', 'Guayaba: 3 piezas', 'Manzanas: 1 pieza', 'Moras: ¾ taza', 'Naranja: 1 pieza', 'Papaya: 1 taza', 'Pasas: 10 piezas', 'Peras: ½ pieza', 'Toronja: 1 pieza', 'Uvas: 18 piezas'],
     ['Betabel cocido: ½ taza', 'Acelga cocida: ½ taza', 'Apio: 1 ½ taza', 'Berenjena cocida: ¾ taza', 'Brócoli: 1 taza', 'Calabacita: 1 pieza', 'Champiñones: ½ taza', 'Chayote: ½ pieza', 'Chícharo cocido: ⅕ taza', 'Col: ½ taza', 'Coliflor: ¾ taza', 'Ejotes: ½ taza', 'Espinaca cocida: ½ taza', 'Espinaca cruda: 2 tazas', 'Jícama: ½ taza', 'Lechuga: 3 tazas', 'Nopal: 1 taza', 'Pepino: 1 ¼ taza', 'Pimiento: 1 taza', 'Tomate: 1 pieza', 'Zanahoria Cruda picada: ½ taza', '* Zanahoria Cocida: ½ taza'],
     ['Frijoles cocidos: ½ taza', 'Garbanzos: ½ taza', 'Lentejas cocidas: ½ taza', 'Hummus: 5 cdas', 'Haba cocida: ½ taza'],
@@ -51,7 +51,7 @@ export class FoodComponent {
     ['Avena cocida: ½ taza', 'Avena cruda: 2 Cda', 'Avena instantánea: ⅓ taza', 'Amaranto: ¼ taza', 'Arroz Integral cocido: ⅓ taza', 'Barra de avena: ½ pieza', 'Barra de granola: ½ pieza', 'Barra Special K: 1 pieza', 'Barra Stila: ¾ pieza', 'Bagel Integral: ½ pieza', 'Camote cocido: ⅓ taza', 'Cereal All Bran: ¼ taza', 'Cereal Multibran F: ¾ taza', 'Elote desgranado: ½ taza', 'Elote cocido: 1 ½ pieza', 'Granola: 3 cucharadas', 'Pasta Integral: ½ taza', 'Pan de barra Integral: 1 reb', 'Papa: ½ pieza', 'Tortilla de Maíz: 1 pieza', 'Tortilla de Nopal: 3 piezas', 'Tostadas Horneadas: 2 piezas', 'Salmas: 3 piezas', 'Palomitas s/m: 2 ½ tazas']
   ];
 
-  public getItemsByIndex( index: number ): string[] {
+  getItemsByIndex( index: number ): string[] {
     return this.items[index]
   }
 

@@ -1,6 +1,23 @@
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="">🥛</span>
+<p class="text-white">Ajusta tus cantidades y KCals</p>
+
+<div class="list-group d-flex align-items-center zoom-out" style="margin: 0 50px;">
+  <div class="list-group-item d-flex justify-content-between d-flex align-items-center rounded-pill mb-3 mx-5 bg-warning" style="width: 250px;">
+    <div class="d-flex align-items-center" style="margin-right: 10px;">
+      <h2 style="margin: 0;">KCal</h2>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <input type="text" class="form-control border-0 rounded-0 custom-border rounded-pill border border-dark" style="margin: 0;" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
   </div>
-  <input type="text" class="form-control">
+
+  <div *ngFor="let emoji of emojis" class="list-group-item d-flex justify-content-between d-flex align-items-center rounded-pill mb-3 mx-5 bg-warning" style="width: 250px;">
+    <div class="d-flex align-items-center" style="margin-right: 10px;">
+      <h2 style="margin: 0;">{{ emoji }}</h2>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <input type="text" class="form-control border-0 rounded-0 custom-border rounded-pill border border-dark" style="margin: 0;" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+  </div>
 </div>
