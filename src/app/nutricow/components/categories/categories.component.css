@@ -6,3 +6,7 @@
 .text-completed {
   color: rgb(18, 104, 18);
 }
+
+.no-border {
+  border: none !important;
+}
