@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NutricowService } from '../../../nutricow/services/nutricow.service';
+import { NutricowService } from '../../services/nutricow.service';
 
 @Component({
-  selector: 'shared-kcal',
+  selector: 'nutricow-kcal',
   templateUrl: './kcal.component.html',
   styles: ``
 })
