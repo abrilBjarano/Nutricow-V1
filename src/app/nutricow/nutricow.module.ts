@@ -14,6 +14,8 @@ import { SubsButtonComponent } from './components/subs-button/subs-button.compon
 import { InputEditComponent } from './components/input-edit/input-edit.component';
 import { FoodComponent } from './components/food/food.component';
 import { KcalComponent } from './components/kcal/kcal.component';
+import { FormsModule } from '@angular/forms';
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 
 
@@ -28,11 +30,13 @@ import { KcalComponent } from './components/kcal/kcal.component';
     InputEditComponent,
     FoodComponent,
     KcalComponent,
+    SubtitleComponent,
   ],
   imports: [
     CommonModule,
     NutricowRoutingModule,
     SharedModule,
+    FormsModule,
   ]
 })
 export class NutricowModule { }

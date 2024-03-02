@@ -1,13 +1,25 @@
-<p class="text-white d-flex justify-content-center mb-5">Ajusta tus cantidades y KCals aquí 👇</p>
+<div class="list-group d-flex align-items-center">
+  <div class="list-group-item d-flex d-flex rounded-pill mb-3 mx-5 bg-dark text-white" style="width: 30%;">
 
-<div class="list-group d-flex align-items-center zoom-out" style="margin: 0 200px;">
-  <div class="list-group-item d-flex justify-content-between d-flex align-items-center rounded-pill mb-3 mx-5 bg-dark no-border text-white" style="width: 60%; margin: 0 auto;">
-    <div class="d-flex align-items-center" style="margin-right: 10px;">
-      <h2 class="small" style="margin: 0;">KCal</h2>
+    <div
+      class="d-flex align-items-center"
+      style="margin-right: 10px;">
+
+      <p
+        style="margin: 0; margin-right: 10px;">
+          KCal
+      </p>
+
     </div>
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input
+      type="text"
+      class="form-control form-control-sm rounded-pill"
+      style="margin: 0;"
+      placeholder="Ingresa la cantidad de calorías que necesitas actualmente..."
+      [(ngModel)]="kcal">
 
-    <input type="text" class="form-control form-control-sm rounded-pill no-border custom-input" style="margin: 0;" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
   </div>
 </div>
+
+

@@ -22,10 +22,14 @@ export class NutricowService {
     return [... this._categories];
   }
 
-  private _kcal: number = 1400;
+  private _kcal: number = 1500;
 
   getKcal(): number {
     return this._kcal;
+  }
+
+  setKCal(kcal: number) {
+    this._kcal = kcal;
   }
 
   addQty( category: Category ) {
