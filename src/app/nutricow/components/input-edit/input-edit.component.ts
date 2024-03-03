@@ -1,5 +1,4 @@
-import { Component} from '@angular/core';
-import { NutricowService } from '../../services/nutricow.service';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'nutricow-input-edit',
@@ -9,12 +8,7 @@ import { NutricowService } from '../../services/nutricow.service';
 export class InputEditComponent {
 
   emojis: string[] = ['🥛', '🍇', '🥦', '🌱', '🥩', '🥑', '🥜', '🎑', '🚰'];
-  kcal!: number;
-  public emojiButton: string = '💾';
 
-  constructor( private nutricowService: NutricowService ) {}
+  @Input() public kcal!: number;
 
-  ngOnInit() {
-    this.kcal = this.nutricowService.getKcal();
-  }
 }

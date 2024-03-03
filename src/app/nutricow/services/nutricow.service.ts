@@ -22,7 +22,7 @@ export class NutricowService {
     return [... this._categories];
   }
 
-  private _kcal: number = 1500;
+  private _kcal: number = 2400;
 
   getKcal(): number {
     return this._kcal;
