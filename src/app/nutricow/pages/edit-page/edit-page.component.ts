@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NutricowService } from '../../services/nutricow.service';
+import { InputEditComponent } from '../../components/input-edit/input-edit.component';
 
 @Component({
   selector: 'nutricow-edit-page',
@@ -11,11 +12,16 @@ export class EditPageComponent implements OnInit {
   public emojiButton: string = '💾';
   public kcal!: number;
 
+  @ViewChild(InputEditComponent) inputEditComponent!: InputEditComponent;
+
   constructor( private NutricowService: NutricowService ) {}
 
   ngOnInit() {
     this.kcal = this.NutricowService.getKcal();
-    console.log(this.kcal);
+  }
+  setKCalFromInput(){
+    const newKcal = this.inputEditComponent.kcal;
+    this.NutricowService.setKCal(newKcal);
   }
 
 }
