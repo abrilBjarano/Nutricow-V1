@@ -1,11 +1,20 @@
-<nutricow-subtitle></nutricow-subtitle>
+<shared-subtitle [subtitle]="subtitle"></shared-subtitle>
 
 
 
 
 
 <nutricow-input-edit
-  [kcal]="kcal">
+  [kcal]="kcal"
+  [upL_L]="upL_L"
+  [upL_F]="upL_F"
+  [upL_V]="upL_V"
+  [upL_Leg]="upL_Leg"
+  [upL_C]="upL_C"
+  [upL_GS]="upL_GS"
+  [upL_GC]="upL_GC"
+  [upL_Cer]="upL_Cer"
+  [upL_A]="upL_A">
 </nutricow-input-edit>
 
 
@@ -15,5 +24,5 @@
 
 <shared-fixed-button
   [emoji]="emojiButton"
-  (click)="setKCalFromInput()">
+  (click)="setNewValuesFromInput()">
 </shared-fixed-button>

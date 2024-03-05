@@ -4,6 +4,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FixedButtonComponent } from './components/fixed-button/fixed-button.component';
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 
 
@@ -12,6 +13,7 @@ import { FixedButtonComponent } from './components/fixed-button/fixed-button.com
     NavbarComponent,
     HeaderComponent,
     FixedButtonComponent,
+    SubtitleComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { FixedButtonComponent } from './components/fixed-button/fixed-button.com
     NavbarComponent,
     HeaderComponent,
     FixedButtonComponent,
+    SubtitleComponent,
   ]
 })
 export class SharedModule { }

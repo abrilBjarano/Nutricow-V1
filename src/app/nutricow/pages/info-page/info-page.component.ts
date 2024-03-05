@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './info-page.component.html',
   styles: ``
 })
-export class InfoPageComponent {}
+export class InfoPageComponent {
+
+  public subtitle: string = 'Lista de alimentos y cantidades por categoría'
+
+
+}

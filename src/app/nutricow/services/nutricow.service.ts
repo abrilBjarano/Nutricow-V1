@@ -32,6 +32,21 @@ export class NutricowService {
     this._kcal = kcal;
   }
 
+
+  getUpperLimitByEmoji(emoji: string): number {
+    const category = this._categories.find(cat => cat.emoji === emoji);
+    return category ? category.upperLimit : 0;
+  }
+
+  setUpperLimitForCategory(emoji: string, upperLimit: number): void {
+    const category = this._categories.find(cat => cat.emoji === emoji);
+    if (category) {
+      category.upperLimit = upperLimit;
+    }
+  }
+
+
+  // Botones
   addQty( category: Category ) {
     if( category.counter < category.upperLimit )
       category.counter ++;
