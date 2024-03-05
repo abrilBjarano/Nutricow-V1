@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../interfaces/category.interface';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,10 @@ export class NutricowService {
     { emoji: '🎑', counter: 0, upperLimit: 6 },
     { emoji: '🚰', counter: 0, upperLimit: 5 },
   ]
+
+  private categoriesSubject = new BehaviorSubject<Category[]>(this._categories);
+  categories$ = this.categoriesSubject.asObservable();
+
 
   getCategories(): Category[] {
     return [... this._categories];
@@ -44,6 +49,7 @@ export class NutricowService {
       category.upperLimit = upperLimit;
     }
   }
+
 
 
   // Botones
