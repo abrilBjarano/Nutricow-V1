@@ -1,44 +1,22 @@
-<div
-  class="list-group d-flex align-items-center zoom-out">
+<div class="list-group d-flex align-items-center zoom-out mw-10">
 
-    <div
-      *ngFor="let category of categories"
-      class="list-group-item bg-secondary d-flex justify-content-between d-flex align-items-center rounded-pill mb-3 mx-5 bg-warning no-border">
+  <div *ngFor="let category of categories" class="list-group-item d-flex justify-content-between d-flex align-items-center rounded-pill mb-3 mx-5 backg no-border" style="width: 100%;">
 
       <div class="d-flex align-items-center emoji-with-shadow">
-        <h2>{{ category.emoji }}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </h2>
+          <h2>{{ category.emoji }}</h2>
       </div>
 
       <div class="d-flex align-items-center mx-auto">
-        <span
-          [ngClass]="{'text-black': category.counter < category.upperLimit, 'text-white': category.counter === category.upperLimit}">
-            <strong>{{ category.counter }}</strong>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong>{{ category.upperLimit }}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </strong>
-        </span>
+          <span [ngClass]="{'text-white': category.counter < category.upperLimit, 'text-black': category.counter === category.upperLimit}">
+              <strong>{{ category.counter }}</strong>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <strong>{{ category.upperLimit }}</strong>
+          </span>
       </div>
 
       <div>
-        <nutricow-subs-button
-          (click)="substractQty(category)">
-        </nutricow-subs-button>
-
-        <nutricow-add-button
-          (click)="addQty(category)">
-        </nutricow-add-button>
+          <nutricow-subs-button (click)="substractQty(category)"></nutricow-subs-button>
+          <nutricow-add-button (click)="addQty(category)"></nutricow-add-button>
       </div>
   </div>
 

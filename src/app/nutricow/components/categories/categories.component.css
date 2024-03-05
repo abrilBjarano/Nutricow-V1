@@ -10,3 +10,7 @@
 .no-border {
   border: none !important;
 }
+
+.backg {
+  background-color: rgba(13, 13, 13, 0.806);
+}
