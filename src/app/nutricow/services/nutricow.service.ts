@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../interfaces/category.interface';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +18,6 @@ export class NutricowService {
     { emoji: '🚰', counter: 0, upperLimit: 5 },
   ]
 
-  private categoriesSubject = new BehaviorSubject<Category[]>(this._categories);
-  categories$ = this.categoriesSubject.asObservable();
 
 
   getCategories(): Category[] {
@@ -66,7 +63,7 @@ export class NutricowService {
   restart() {
     this._categories.forEach( category => {
       category.counter = 0;
-    })
+    });
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NutricowService } from '../../services/nutricow.service';
 
 @Component({
@@ -6,9 +6,13 @@ import { NutricowService } from '../../services/nutricow.service';
   templateUrl: './kcal.component.html',
   styles: ``
 })
-export class KcalComponent {
+export class KcalComponent implements OnInit {
 
   constructor( private nutricowService: NutricowService ) {}
+
+  ngOnInit(): void {
+    this.getKcal();
+  }
 
   getKcal(): number {
     return this.nutricowService.getKcal();
