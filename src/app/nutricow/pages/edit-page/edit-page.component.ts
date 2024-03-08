@@ -10,6 +10,7 @@ import { InputEditComponent } from '../../components/input-edit/input-edit.compo
 export class EditPageComponent implements OnInit {
 
   public subtitle: string = 'Ajusta tus cantidades y KCals aquí 👇';
+  public subtitle2: string = 'Al terminar, dar click en el botón Guardar. 💾➡️';
 
   public emojiButton: string = '💾';
   public kcal!: number;
