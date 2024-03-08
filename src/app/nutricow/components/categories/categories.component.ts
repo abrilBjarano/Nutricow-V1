@@ -14,6 +14,7 @@ export class CategoriesComponent implements OnInit {
   constructor( private nutricowService: NutricowService ) {};
 
   ngOnInit(): Category[] {
+    this.nutricowService.loadLocalStorage();
     return this.categories = this.nutricowService.getCategories();
   }
 

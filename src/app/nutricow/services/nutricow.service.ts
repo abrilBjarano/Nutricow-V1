@@ -15,9 +15,23 @@ export class NutricowService {
     { emoji: '🥑', counter: 0, upperLimit: 2 },
     { emoji: '🥜', counter: 0, upperLimit: 1 },
     { emoji: '🎑', counter: 0, upperLimit: 6 },
-    { emoji: '🚰', counter: 0, upperLimit: 5 },
+    { emoji: '🚰', counter: 0, upperLimit: 4 },
   ]
 
+
+  private saveLocalStorage(): void {
+
+    const itemsJSON = JSON.stringify(this._categories);
+    localStorage.setItem('history', itemsJSON );
+  }
+
+  public loadLocalStorage(): void {
+    const itemsJSON = localStorage.getItem('history');
+
+    if (itemsJSON) {
+      this._categories = JSON.parse(itemsJSON);
+    }
+  }
 
 
   getCategories(): Category[] {
@@ -44,6 +58,7 @@ export class NutricowService {
     const category = this._categories.find(cat => cat.emoji === emoji);
     if (category) {
       category.upperLimit = upperLimit;
+      this.saveLocalStorage();
     }
   }
 
@@ -53,17 +68,20 @@ export class NutricowService {
   addQty( category: Category ) {
     if( category.counter < category.upperLimit )
       category.counter ++;
+      this.saveLocalStorage();
   }
 
   substractQty( category: Category ) {
     if( category.counter > 0 )
       category.counter --;
+      this.saveLocalStorage();
   }
 
   restart() {
     this._categories.forEach( category => {
       category.counter = 0;
     });
+    this.saveLocalStorage();
   }
 
 }

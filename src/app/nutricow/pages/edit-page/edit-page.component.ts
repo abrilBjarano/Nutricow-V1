@@ -39,6 +39,7 @@ export class EditPageComponent implements OnInit {
     this.upL_Cer = this.nutricowService.getUpperLimitByEmoji('🎑');
     this.upL_A = this.nutricowService.getUpperLimitByEmoji('🚰');
   }
+
   setNewValuesFromInput(){
 
     const newKcal = this.inputEditComponent.kcal;
