@@ -11,6 +11,7 @@ export class KcalComponent implements OnInit {
   constructor( private nutricowService: NutricowService ) {}
 
   ngOnInit(): void {
+    this.nutricowService.loadLocalStorage();
     this.getKcal();
   }
 

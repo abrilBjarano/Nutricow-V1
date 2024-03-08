@@ -19,17 +19,27 @@ export class NutricowService {
   ]
 
 
-  private saveLocalStorage(): void {
+  private _kcal: number = 2400;
 
-    const itemsJSON = JSON.stringify(this._categories);
-    localStorage.setItem('history', itemsJSON );
+
+  private saveLocalStorage(): void {
+    const dataToSave = {
+      categories: this._categories,
+      kcals: this._kcal
+    };
+
+    const dataJSON = JSON.stringify(dataToSave);
+    localStorage.setItem('history', dataJSON);
   }
+
 
   public loadLocalStorage(): void {
     const itemsJSON = localStorage.getItem('history');
 
     if (itemsJSON) {
-      this._categories = JSON.parse(itemsJSON);
+      const data = JSON.parse(itemsJSON);
+      this._categories = data.categories;
+      this._kcal = data.kcals;
     }
   }
 
@@ -38,7 +48,6 @@ export class NutricowService {
     return [... this._categories];
   }
 
-  private _kcal: number = 2400;
 
   getKcal(): number {
     return this._kcal;
