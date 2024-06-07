@@ -58,7 +58,7 @@ export class EditPageComponent implements OnInit {
     const newLeg = this.inputEditComponent.upL_Leg;
     this.nutricowService.setUpperLimitForCategory('🌱', newLeg);
 
-    const newC = this.inputEditComponent.upL_Leg;
+    const newC = this.inputEditComponent.upL_C;
     this.nutricowService.setUpperLimitForCategory('🥩', newC);
 
     const newGS = this.inputEditComponent.upL_GS;
