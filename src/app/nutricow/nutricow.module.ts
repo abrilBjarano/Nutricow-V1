@@ -15,7 +15,6 @@ import { InputEditComponent } from './components/input-edit/input-edit.component
 import { FoodComponent } from './components/food/food.component';
 import { KcalComponent } from './components/kcal/kcal.component';
 import { FormsModule } from '@angular/forms';
-import { SubtitleComponent } from '../shared/components/subtitle/subtitle.component';
 
 
 

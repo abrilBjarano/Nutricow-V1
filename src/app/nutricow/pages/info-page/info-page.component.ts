@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FoodComponent } from '../../components/food/food.component';
 
 @Component({
   selector: 'nutricow-info-page',
